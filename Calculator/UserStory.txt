@@ -1,0 +1,26 @@
+User Stories Calculator
+
+User Story Vorlage: Als <Rolle/Anwendertyp> möchte ich <Ziel/Wunsch/Funktion>, um <Nutzen>.
+
+Titel: Addieren
+User Story: Als Benutzer möchte ich zwei Zahlen eingeben, um deren Summe berechnen zu lassen.
+Akzeptanzkriterien:
+	• Dezimalzahlen zwischen -10 und 100 können addiert werden
+	• Ausgabe soll nicht in Gleitkommadarstellung angezeigt werden
+	• Rechner-Genauigkeit soll 10 Stellen betragen
+	• Wenn Komma "," statt Punkt "." eingegeben wird soll trotzdem das richtige Ergebnis rauskommen
+Status:
+	• implementiert
+	• getestet
+	• erledigt
+
+
+
+Titel: Starten
+User Story: Als Benutzer möchte ich den Taschenrechner schnell aufrufen können, um mein Resultat schnell zu bekommen.
+Akzeptanzkriterien:
+	• Der Rechner soll innerhalb von 2 Sekunden starten.
+Status:
+	• implementiert
+	• getestet
+	• erledigt
