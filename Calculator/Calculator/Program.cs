@@ -49,7 +49,8 @@ namespace Calculator
         static string GetAddend(string outputText)
         {
             Console.Write(outputText);
-            return Console.ReadLine();
+            string addend = Console.ReadLine().Replace(",",".");
+            return addend;
         }
 
         static double Add(double firstNo, double secondNo)
