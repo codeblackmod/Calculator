@@ -8,18 +8,24 @@ namespace Calculator
 {
     internal class Program
     {
+        // Methode definieren in 7 Schritten ...
+        // Modifizierer definieren
+        // Datentyp des Rückgabewertes definieren
+        // Methodennamen definieren
+        // Runde Klammern an den Methodennamen anfügen
+        // Überlegen welche Parameter benötigt werden (optional diese definieren)
+        // Geschweifte Klammern einfügen
+        // Methode implementieren (Anweisungen in den Methodenkörper schreiben)
+
         static void Main(string[] args)
         {
             // User Story "Addieren": Als Benutzer möchte ich zwei Zahlen eingeben, um deren Summe berechnen zu lassen.
-            Console.Write("Please type in the first addend: ");
-            string firstAddend = Console.ReadLine().Replace(',', '.');
-
-            Console.Write("Please type in the second addend: ");
-            string secondAddend = Console.ReadLine().Replace(',', '.');
+            string firstAddend = GetFirstAddend();
+            string secondAddend = GetSecondAddend();
 
             // Wandle Text in Dezimalzahl mittels extra Parameter
-            double firstAddendNo = Convert.ToDouble(firstAddend);
-            double secondAddendNo = Convert.ToDouble(secondAddend);
+            double firstAddendNo = ConvertToDouble(firstAddend);
+            double secondAddendNo = ConvertToDouble(secondAddend);
 
             // Berechnung ausführen
             double result = Add(firstAddendNo, secondAddendNo);
@@ -30,6 +36,21 @@ namespace Calculator
             WaitForUserInput();
         }
 
+        static double ConvertToDouble(string no)
+        {
+            return Convert.ToDouble(no);
+        }
+
+        static string GetFirstAddend()
+        {
+            Console.Write("Please type in the first addend: ");
+            return Console.ReadLine();
+        }
+        static string GetSecondAddend()
+        {
+            Console.Write("Please type in the second addend: ");
+            return Console.ReadLine();
+        }
         static double Add(double firstNo, double secondNo)
         {
             double result = firstNo + secondNo;
