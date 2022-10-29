@@ -17,6 +17,9 @@ namespace Calculator
         // Geschweifte Klammern einfügen
         // Methode implementieren (Anweisungen in den Methodenkörper schreiben)
 
+        //Wenn man TODO gefolgt von ":" als Kommentar im VS Editor einfügt, kann unter dem Menüpunkt "View" die Task List anzeigen lassen
+        //TODO: Test Todo
+
         static void Main(string[] args)
         {
             // User Story "Addieren": Als Benutzer möchte ich zwei Zahlen eingeben, um deren Summe berechnen zu lassen.
@@ -34,6 +37,12 @@ namespace Calculator
             CalculateOutput("The sum is: ", result);
 
             WaitForUserInput();
+        }
+
+        static double Substract(double minuend, double subtrahend)
+        {
+            double result = minuend - subtrahend;
+            return result;
         }
 
         static void CalculateOutput(string outputText, double result)
