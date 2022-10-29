@@ -22,11 +22,23 @@ namespace Calculator
             double secondAddendNo = Convert.ToDouble(secondAddend);
 
             // Berechnung ausführen
-            double sum = firstAddendNo + secondAddendNo;
+            double result = Add(firstAddendNo, secondAddendNo);
 
             // Ausgabe ohne Gleitkommadarstellung
-            Console.WriteLine("The sum is: {0}", sum);
+            Console.WriteLine("The sum is: {0}", result);
 
+            WaitForUserInput();
+        }
+
+        static double Add(double firstNo, double secondNo)
+        {
+            double result = firstNo + secondNo;
+            return result;
+        }
+
+        static void WaitForUserInput()
+        {
+            Console.Write("Press enter to exit!");
             Console.ReadLine();
         }
     }

@@ -5,3 +5,4 @@ C:\Users\schwa\source\repos\codeblackmod\Calculator\Calculator\Calculator\obj\De
 C:\Users\schwa\source\repos\codeblackmod\Calculator\Calculator\Calculator\obj\Debug\Calculator.csproj.CoreCompileInputs.cache
 C:\Users\schwa\source\repos\codeblackmod\Calculator\Calculator\Calculator\obj\Debug\Calculator.exe
 C:\Users\schwa\source\repos\codeblackmod\Calculator\Calculator\Calculator\obj\Debug\Calculator.pdb
+C:\Users\schwa\source\repos\codeblackmod\Calculator\Calculator\Calculator\obj\Debug\Calculator.csproj.AssemblyReference.cache
