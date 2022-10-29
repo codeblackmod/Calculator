@@ -30,10 +30,15 @@ namespace Calculator
             // Berechnung ausführen
             double result = Add(firstAddendNo, secondAddendNo);
 
-            // Ausgabe ohne Gleitkommadarstellung
-            Console.WriteLine("The sum is: {0}", result);
+            // Ausgabe
+            CalculateOutput("The sum is: ", result);
 
             WaitForUserInput();
+        }
+
+        static void CalculateOutput(string outputText, double result)
+        {
+            Console.WriteLine(outputText + result);
         }
 
         static double ConvertToDouble(string no)
