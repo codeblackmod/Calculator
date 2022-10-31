@@ -30,8 +30,15 @@ namespace Calculator
             // Wandle Text in Dezimalzahl mittels extra Parameter
             double firstNumber = ConvertToDouble(firstNumberAsString);
             double secondNumber = ConvertToDouble(secondNumberAsString);
-            
+
             // Berechnung ausführen
+            Calculate(operation, firstNumber, secondNumber);
+
+            GetUserInput("Press enter to exit!");
+        }
+
+        static void Calculate(string operation, double firstNumber, double secondNumber)
+        {
             double result = 0;
             switch (operation)
             {
@@ -39,7 +46,7 @@ namespace Calculator
                     result = Add(firstNumber, secondNumber);
                     Console.WriteLine("The result is: " + result);
                     break;
-                
+
                 case "-":
                     result = Substract(firstNumber, secondNumber);
                     Console.WriteLine("The result is: " + result);
@@ -59,8 +66,6 @@ namespace Calculator
                     Console.WriteLine("Chosen operation not supported.");
                     break;
             }
-
-            GetUserInput("Press enter to exit!");
         }
 
         static double Divide(double dividend, double divisor)
