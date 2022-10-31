@@ -23,15 +23,15 @@ namespace Calculator
         static void Main(string[] args)
         {
             // User Story "Addieren": Als Benutzer möchte ich zwei Zahlen eingeben, um deren Summe berechnen zu lassen.
-            string firstAddend = GetUserInput("Please type in the first addend: ");
-            string secondAddend = GetUserInput("Please type in the second addend: ");
+            string firstNumberAsString = GetUserInput("Please type in the first addend: ");
+            string secondNumberAsString = GetUserInput("Please type in the second addend: ");
 
             // Wandle Text in Dezimalzahl mittels extra Parameter
-            double firstAddendNo = ConvertToDouble(firstAddend);
-            double secondAddendNo = ConvertToDouble(secondAddend);
+            double firstNumber = ConvertToDouble(firstNumberAsString);
+            double secondNumber = ConvertToDouble(secondNumberAsString);
 
             // Berechnung ausführen
-            double result = Add(firstAddendNo, secondAddendNo);
+            double result = Add(firstNumber, secondNumber);
 
             // Ausgabe
             CalculateOutput("The sum is: ", result);
