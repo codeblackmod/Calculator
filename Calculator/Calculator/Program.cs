@@ -25,29 +25,54 @@ namespace Calculator
             // User Story "Addieren": Als Benutzer möchte ich zwei Zahlen eingeben, um deren Summe berechnen zu lassen.
             string firstNumberAsString = GetUserInput("Please type in the first number: ");
             string secondNumberAsString = GetUserInput("Please type in the second number: ");
-            string operation = GetUserInput("Please type in the operation you would like to use (+ or -): ");
+            string operation = GetUserInput("Please type in the operation you would like to use (+, -, * or /): ");
 
             // Wandle Text in Dezimalzahl mittels extra Parameter
             double firstNumber = ConvertToDouble(firstNumberAsString);
             double secondNumber = ConvertToDouble(secondNumberAsString);
+            
+            // Berechnung ausführen
             double result = 0;
+            switch (operation)
+            {
+                case "+":
+                    result = Add(firstNumber, secondNumber);
+                    Console.WriteLine("The result is: ", result);
+                    break;
+                
+                case "-":
+                    result = Substract(firstNumber, secondNumber);
+                    Console.WriteLine("The result is: ", result);
+                    break;
 
-            if (operation == "+")
-            {
-                result = Add(firstNumber, secondNumber);
-                Console.WriteLine("The result is: ", result);
-            }
-            else if (operation == "-")
-            {
-                result = Substract(firstNumber, secondNumber);
-                Console.WriteLine("The result is: ", result);
-            }
-            else
-            {
-                Console.WriteLine("Chosen operation not supported.");
+                case "*":
+                    result = Multiplicate(firstNumber, secondNumber);
+                    Console.WriteLine("The result is: ", result);
+                    break;
+
+                case "/":
+                    result = Divide(firstNumber, secondNumber);
+                    Console.WriteLine("The result is: ", result);
+                    break;
+
+                default:
+                    Console.WriteLine("Chosen operation not supported.");
+                    break;
             }
 
             GetUserInput("Press enter to exit!");
+        }
+
+        static double Divide(double dividend, double divisor)
+        {
+            double result = dividend / divisor;
+            return result;
+        }
+
+        static double Multiplicate(double factor1, double factor2)
+        {
+            double result = factor1 * factor2;
+            return result;
         }
 
         static double Substract(double minuend, double subtrahend)
