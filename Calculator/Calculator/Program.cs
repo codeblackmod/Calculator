@@ -32,40 +32,48 @@ namespace Calculator
             double secondNumber = ConvertToDouble(secondNumberAsString);
 
             // Berechnung ausführen
-            Calculate(operation, firstNumber, secondNumber);
+            double result = Calculate(operation, firstNumber, secondNumber);
+
+            // Berechnung ausgeben
+            ResultOutput(operation, result);
 
             GetUserInput("Press enter to exit!");
         }
 
-        static void Calculate(string operation, double firstNumber, double secondNumber)
+        static void ResultOutput(string operation, double result)
+        {
+            if (operation == "+" || operation == "-" || operation == "*" || operaiont == "/")
+            {
+                Console.WriteLine("The result is: " + result);
+            }
+            else
+            {
+                Console.WriteLine("Chosen operation not supported.");
+            }
+        }
+
+        static double Calculate(string operation, double firstNumber, double secondNumber)
         {
             double result = 0;
             switch (operation)
             {
                 case "+":
                     result = Add(firstNumber, secondNumber);
-                    Console.WriteLine("The result is: " + result);
                     break;
 
                 case "-":
                     result = Substract(firstNumber, secondNumber);
-                    Console.WriteLine("The result is: " + result);
                     break;
 
                 case "*":
                     result = Multiplicate(firstNumber, secondNumber);
-                    Console.WriteLine("The result is: " + result);
                     break;
 
                 case "/":
                     result = Divide(firstNumber, secondNumber);
-                    Console.WriteLine("The result is: " + result);
-                    break;
-
-                default:
-                    Console.WriteLine("Chosen operation not supported.");
                     break;
             }
+            return result;
         }
 
         static double Divide(double dividend, double divisor)
