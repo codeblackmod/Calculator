@@ -2,6 +2,24 @@ User Stories Calculator
 
 User Story Vorlage: Als <Rolle/Anwendertyp> möchte ich <Ziel/Wunsch/Funktion>, um <Nutzen>.
 
+Titel: Division
+User Story: Als Benutzer möchte ich zwei Zahlen eingeben, um deren Quotient berechnen zu lassen.
+Akzeptanzkriterien:
+	• Dezimalzahlen zwischen -10.0 und 100.0 können dividiert werden
+Status:
+	• implementiert
+	• getestet
+	• erledigt
+
+Titel: Multiplikation
+User Story: Als Benutzer möchte ich zwei Zahlen eingeben, um deren Produkt berechnen zu lassen.
+Akzeptanzkriterien:
+	• Dezimalzahlen zwischen -10.0 und 100.0 können multipliziert werden
+Status:
+	• implementiert
+	• getestet
+	• erledigt
+
 Titel: Softwarestruktur
 User Story: Als Entwickler möchte ich den Quellcode sauber strukturieren, um später weitere Funktionalitäten hinzufügen zu können.
 Akzeptanzkriterien:
@@ -14,9 +32,11 @@ Status:
 Titel: Subtrahieren
 User Story: Als Benutzer möchte ich zwei Zahlen eingeben, um deren Differenz berechnen zu lassen.
 Akzeptanzkriterien:
-	• Dezimalzahlen zwischen -10.0 und 100.0 können subtrahiert wrden
+	• Dezimalzahlen zwischen -10.0 und 100.0 können subtrahiert werden
 Status:
-	• Offen
+	• implementiert
+	• getestet
+	• erledigt
 
 Titel: Addieren
 User Story: Als Benutzer möchte ich zwei Zahlen eingeben, um deren Summe berechnen zu lassen.
