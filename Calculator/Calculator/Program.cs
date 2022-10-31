@@ -36,7 +36,7 @@ namespace Calculator
             // Ausgabe
             CalculateOutput("The sum is: ", result);
 
-            WaitForUserInput();
+            GetUserInput("Press enter to exit!");
         }
 
         static double Substract(double minuend, double subtrahend)
@@ -66,12 +66,6 @@ namespace Calculator
         {
             double result = firstNo + secondNo;
             return result;
-        }
-
-        static void WaitForUserInput()
-        {
-            Console.Write("Press enter to exit!");
-            Console.ReadLine();
         }
     }
 }
