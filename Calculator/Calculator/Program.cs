@@ -35,14 +35,17 @@ namespace Calculator
             if (operation == "+")
             {
                 result = Add(firstNumber, secondNumber);
+                Console.WriteLine("The result is: ", result);
             }
             else if (operation == "-")
             {
                 result = Substract(firstNumber, secondNumber);
+                Console.WriteLine("The result is: ", result);
             }
-
-            // Ausgabe
-            CalculateOutput("The sum is: ", result);
+            else
+            {
+                Console.WriteLine("Chosen operation not supported.");
+            }
 
             GetUserInput("Press enter to exit!");
         }
@@ -51,11 +54,6 @@ namespace Calculator
         {
             double result = minuend - subtrahend;
             return result;
-        }
-
-        static void CalculateOutput(string outputText, double result)
-        {
-            Console.WriteLine(outputText + result);
         }
 
         static double ConvertToDouble(string no)
