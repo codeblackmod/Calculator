@@ -23,8 +23,8 @@ namespace Calculator
         static void Main(string[] args)
         {
             // User Story "Addieren": Als Benutzer möchte ich zwei Zahlen eingeben, um deren Summe berechnen zu lassen.
-            string firstAddend = GetAddend("Please type in the first addend: ");
-            string secondAddend = GetAddend("Please type in the second addend: ");
+            string firstAddend = GetUserInput("Please type in the first addend: ");
+            string secondAddend = GetUserInput("Please type in the second addend: ");
 
             // Wandle Text in Dezimalzahl mittels extra Parameter
             double firstAddendNo = ConvertToDouble(firstAddend);
@@ -55,7 +55,7 @@ namespace Calculator
             return Convert.ToDouble(no);
         }
 
-        static string GetAddend(string outputText)
+        static string GetUserInput(string outputText)
         {
             Console.Write(outputText);
             string addend = Console.ReadLine().Replace(",",".");
