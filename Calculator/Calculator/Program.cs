@@ -37,22 +37,22 @@ namespace Calculator
             {
                 case "+":
                     result = Add(firstNumber, secondNumber);
-                    Console.WriteLine("The result is: ", result);
+                    Console.WriteLine("The result is: " + result);
                     break;
                 
                 case "-":
                     result = Substract(firstNumber, secondNumber);
-                    Console.WriteLine("The result is: ", result);
+                    Console.WriteLine("The result is: " + result);
                     break;
 
                 case "*":
                     result = Multiplicate(firstNumber, secondNumber);
-                    Console.WriteLine("The result is: ", result);
+                    Console.WriteLine("The result is: " + result);
                     break;
 
                 case "/":
                     result = Divide(firstNumber, secondNumber);
-                    Console.WriteLine("The result is: ", result);
+                    Console.WriteLine("The result is: " + result);
                     break;
 
                 default:
