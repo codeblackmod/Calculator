@@ -42,7 +42,7 @@ namespace Calculator
 
         static void ResultOutput(string operation, double result)
         {
-            if (operation == "+" || operation == "-" || operation == "*" || operaiont == "/")
+            if (operation == "+" || operation == "-" || operation == "*" || operation == "/")
             {
                 Console.WriteLine("The result is: " + result);
             }
