@@ -32,7 +32,8 @@ namespace Calculator
             double secondNumber = ConvertToDouble(secondNumberAsString);
 
             // Berechnung ausführen
-            double result = Calculate(operation, firstNumber, secondNumber);
+            RechnerModel model = new RechnerModel();
+            double result = model.Calculate(operation, firstNumber, secondNumber);
 
             // Berechnung ausgeben
             ResultOutput(operation, result);
