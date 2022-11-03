@@ -2,6 +2,13 @@ User Stories Calculator
 
 User Story Vorlage: Als <Rolle/Anwendertyp> möchte ich <Ziel/Wunsch/Funktion>, um <Nutzen>.
 
+Titel: ObjektOrientierung
+User Story: Als Entwickler möchte ich die Anwendung objektorientiert entwickeln, um später einfach weitere Funktionalitäten hinzufügen zu können.
+Akzeptanzkriterien:
+	• Diese Story ist eine Erweiterung zu Story "Softwarestruktur"
+Status:
+	• offen
+
 Titel: Division
 User Story: Als Benutzer möchte ich zwei Zahlen eingeben, um deren Quotient berechnen zu lassen.
 Akzeptanzkriterien:
