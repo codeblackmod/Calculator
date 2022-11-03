@@ -22,10 +22,10 @@ namespace Calculator
 
         static void Main(string[] args)
         {
-            // User Story "Addieren": Als Benutzer möchte ich zwei Zahlen eingeben, um deren Summe berechnen zu lassen.
-            string firstNumberAsString = GetUserInput("Please type in the first number: ");
-            string secondNumberAsString = GetUserInput("Please type in the second number: ");
-            string operation = GetUserInput("Please type in the operation you would like to use (+, -, * or /): ");
+            ConsoleView view = new ConsoleView();
+            string firstNumberAsString = view.GetUserInput("Please type in the first number: ");
+            string secondNumberAsString = view.GetUserInput("Please type in the second number: ");
+            string operation = view.GetUserInput("Please type in the operation you would like to use (+, -, * or /): ");
 
             // Wandle Text in Dezimalzahl mittels extra Parameter
             double firstNumber = ConvertToDouble(firstNumberAsString);
@@ -36,34 +36,14 @@ namespace Calculator
             model.Calculate(operation, firstNumber, secondNumber);
 
             // Berechnung ausgeben
-            ResultOutput(operation, model.Result);
+            view.ResultOutput(operation, model.Result);
 
-            GetUserInput("Press enter to exit!");
-        }
-
-        static void ResultOutput(string operation, double result)
-        {
-            if (operation == "+" || operation == "-" || operation == "*" || operation == "/")
-            {
-                Console.WriteLine("The result is: " + result);
-            }
-            else
-            {
-                Console.WriteLine("Chosen operation not supported.");
-            }
+            view.GetUserInput("Press enter to exit!");
         }
 
         static double ConvertToDouble(string no)
         {
             return Convert.ToDouble(no);
-        }
-
-        static string GetUserInput(string outputText)
-        {
-            Console.Write(outputText);
-            string addend = Console.ReadLine().Replace(",",".");
-            return addend;
-        }
-        
+        }        
     }
 }

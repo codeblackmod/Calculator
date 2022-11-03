@@ -1,6 +1,6 @@
 ﻿namespace Calculator
 {
-    class RechnerModel
+    partial class RechnerModel
     {
         private double _result;
 
