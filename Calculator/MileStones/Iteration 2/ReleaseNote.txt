@@ -1,0 +1,9 @@
+TAG: Iteration_2_Fertig
+ART: Internes Entwicklungsrelease
+STATUS: Informell getestet - kann an Tester verteilt werden.
+FUNKTION:
+	* Addieren von Gleitkommazahlen
+	* Subtrahieren von Gleitkommazahlen
+	* Miltiplizieren von Gleitkommazahlen
+	* Dividieren von Gleitkommazahlen
+	* Schnelles Starten (einfach die EXE ausführen)
