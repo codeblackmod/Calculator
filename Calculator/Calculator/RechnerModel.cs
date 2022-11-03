@@ -2,8 +2,6 @@
 {
     partial class RechnerModel
     {
-        private double _result;
-
         public double Result { get; private set; }
 
         public RechnerModel()

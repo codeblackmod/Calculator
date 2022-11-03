@@ -4,6 +4,13 @@ namespace Calculator
 {
     class ConsoleView
     {
+        private RechnerModel _model;
+
+        public ConsoleView(RechnerModel model)
+        {
+            this._model = model;
+        }
+
         public string GetUserInput(string outputText)
         {
             Console.Write(outputText);
@@ -11,11 +18,11 @@ namespace Calculator
             return addend;
         }
 
-        public void ResultOutput(string operation, double result)
+        public void ResultOutput(string operation)
         {
             if (operation == "+" || operation == "-" || operation == "*" || operation == "/")
             {
-                Console.WriteLine("The result is: " + result);
+                Console.WriteLine("The result is: " + _model.Result);
             }
             else
             {
