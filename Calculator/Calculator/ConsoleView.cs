@@ -11,6 +11,24 @@ namespace Calculator
             this._model = model;
         }
 
+        public string GetNumberFromUser()
+        {
+            Console.Write("Insert a number for calculation: ");
+            return Console.ReadLine();
+        }
+
+        public string GetOperatorFromUser()
+        {
+            Console.Write("Insert an operator for calculation type (+, -, * or /): ");
+            return Console.ReadLine();
+        }
+
+        public void WaitForExitThroughUser()
+        {
+            Console.WriteLine("To exit the calculater please press enter!");
+            Console.ReadLine();
+        }
+
         public string GetUserInput(string outputText)
         {
             Console.Write(outputText);
