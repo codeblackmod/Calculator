@@ -2,28 +2,34 @@
 {
     class RechnerModel
     {
-        public double Calculate(string operation, double firstNumber, double secondNumber)
+        private double _result;
+
+        public double Result { get; private set; }
+
+        public RechnerModel()
         {
-            double result = 0;
+            Result = 0;
+        }
+        public void Calculate(string operation, double firstNumber, double secondNumber)
+        {
             switch (operation)
             {
                 case "+":
-                    result = this.Add(firstNumber, secondNumber);
+                    Result = this.Add(firstNumber, secondNumber);
                     break;
 
                 case "-":
-                    result = this.Substract(firstNumber, secondNumber);
+                    Result = this.Substract(firstNumber, secondNumber);
                     break;
 
                 case "*":
-                    result = this.Multiplicate(firstNumber, secondNumber);
+                    Result = this.Multiplicate(firstNumber, secondNumber);
                     break;
 
                 case "/":
-                    result = this.Divide(firstNumber, secondNumber);
+                    Result = this.Divide(firstNumber, secondNumber);
                     break;
             }
-            return result;
         }
 
         private double Add(double firstNo, double secondNo)

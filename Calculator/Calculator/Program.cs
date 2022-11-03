@@ -33,10 +33,10 @@ namespace Calculator
 
             // Berechnung ausführen
             RechnerModel model = new RechnerModel();
-            double result = model.Calculate(operation, firstNumber, secondNumber);
+            model.Calculate(operation, firstNumber, secondNumber);
 
             // Berechnung ausgeben
-            ResultOutput(operation, result);
+            ResultOutput(operation, model.Result);
 
             GetUserInput("Press enter to exit!");
         }
