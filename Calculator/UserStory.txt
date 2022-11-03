@@ -2,6 +2,23 @@ User Stories Calculator
 
 User Story Vorlage: Als <Rolle/Anwendertyp> möchte ich <Ziel/Wunsch/Funktion>, um <Nutzen>.
 
+Titel: Beenden
+User Story: Als Benutzer möchte ich "Fertig" anstelle einer weiteren Zahl eingeben, um den Taschenrechner zu beenden.
+Akzeptanzkriterien:
+	• Taschenrechner wird beendet, sobald "Fertig" (in dieser Schreibweise) eingegeben wird
+	• Es gibt einen entsprechenden Hinweis, dass der Benutzer weiß mit welchem Kommando er den Taschenrechner beenden kann
+Status:
+	• offen
+
+Titel: Fortlaufende Berechnung
+User Story: Als Benutzer möchte ich eine weitere Zahl eingeben, um die vorherige Operation nochmals auszuführen mit dem vorherigen Resultat.
+Akzeptanzkriterien:
+	• Gleitkommazahlen zwischen -10.0 und 100.0 können eingegeben werden
+	• Die Operation aus der vorherigen Berechnung wird nochmals verwendet
+	• Das neue Resultat wird ausgegeben ohne weitere Interaktion mit dem Benutzer
+Status:
+	• offen
+
 Titel: ObjektOrientierung
 User Story: Als Entwickler möchte ich die Anwendung objektorientiert entwickeln, um später einfach weitere Funktionalitäten hinzufügen zu können.
 Akzeptanzkriterien:
