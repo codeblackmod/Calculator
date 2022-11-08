@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Calculator
 {
-    internal class Program
+    internal partial class Program
     {
         // Methode definieren in 7 Schritten ...
         // Modifizierer definieren
@@ -24,27 +24,9 @@ namespace Calculator
         {
             RechnerModel model = new RechnerModel();
             ConsoleView view = new ConsoleView(model);
+            ApplicationController controller = new ApplicationController(view, model);
 
-            string firstNumberAsString = view.GetNumberFromUser();
-            string operation = view.GetOperatorFromUser();
-            string secondNumberAsString = view.GetNumberFromUser();
-
-            // Wandle Text in Dezimalzahl mittels extra Parameter
-            double firstNumber = ConvertToDouble(firstNumberAsString);
-            double secondNumber = ConvertToDouble(secondNumberAsString);
-
-            // Berechnung ausführen
-            model.Calculate(operation, firstNumber, secondNumber);
-
-            // Berechnung ausgeben
-            view.ResultOutput(operation);
-
-            view.GetUserInput("Press enter to exit!");
-        }
-
-        static double ConvertToDouble(string no)
-        {
-            return Convert.ToDouble(no);
-        }        
+            controller.Execute();
+        }       
     }
 }
