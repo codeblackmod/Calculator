@@ -19,17 +19,17 @@ namespace Calculator
             this._model.SecondNumber = GetNumberFromUser();
         }
             
-        private static double GetNumberFromUser()
+        private double GetNumberFromUser()
         {
             Console.Write("Insert a number for calculation: ");
             return ConvertToDouble(Console.ReadLine().Replace(",","."));
         }
-        private static double ConvertToDouble(string no)
+        private double ConvertToDouble(string no)
         {
             return Convert.ToDouble(no);
         }
 
-        private static string GetOperatorFromUser()
+        private string GetOperatorFromUser()
         {
             Console.Write("Insert an operator for calculation type (+, -, * or /): ");
             return Console.ReadLine();
