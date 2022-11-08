@@ -24,9 +24,10 @@ namespace Calculator
         {
             RechnerModel model = new RechnerModel();
             ConsoleView view = new ConsoleView(model);
-            string firstNumberAsString = view.GetUserInput("Please type in the first number: ");
-            string secondNumberAsString = view.GetUserInput("Please type in the second number: ");
-            string operation = view.GetUserInput("Please type in the operation you would like to use (+, -, * or /): ");
+
+            string firstNumberAsString = view.GetNumberFromUser();
+            string operation = view.GetOperatorFromUser();
+            string secondNumberAsString = view.GetNumberFromUser();
 
             // Wandle Text in Dezimalzahl mittels extra Parameter
             double firstNumber = ConvertToDouble(firstNumberAsString);
