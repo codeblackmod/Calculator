@@ -7,9 +7,12 @@ namespace Calculator
     {
         private RechnerModel _model;
 
+        public bool UserWantToQuit { get; private set; }
+
         public ConsoleView(RechnerModel model)
         {
             this._model = model;
+            UserWantToQuit = false;
         }
 
         public void GetInputsFromUser()
@@ -21,8 +24,17 @@ namespace Calculator
             
         private double GetNumberFromUser()
         {
-            Console.Write("Insert a number for calculation: ");
-            return ConvertToDouble(Console.ReadLine().Replace(",","."));
+            string input;
+            Console.Write("Insert a number for calculation (Quit for exit): ");
+            input = Console.ReadLine().Replace(",",".");
+
+            if (input == "Quit")
+            {
+                UserWantToQuit = true;
+                input = "0.0";
+            }
+
+            return ConvertToDouble(input);
         }
         private double ConvertToDouble(string no)
         {

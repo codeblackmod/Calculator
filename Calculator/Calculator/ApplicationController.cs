@@ -15,11 +15,14 @@ namespace Calculator
 
         public void Execute()
         {
-            this._view.GetInputsFromUser();
+            while (!this._view.UserWantToQuit)
+            {
+                this._view.GetInputsFromUser();
 
-            this._model.Calculate();
+                this._model.Calculate();
 
-            this._view.ResultOutput();
+                this._view.ResultOutput();
+            }
 
             this._view.WaitForExitThroughUser();
         }
