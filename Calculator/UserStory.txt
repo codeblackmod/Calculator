@@ -8,7 +8,9 @@ Akzeptanzkriterien:
 	• Taschenrechner wird beendet, sobald "Fertig" (in dieser Schreibweise) eingegeben wird
 	• Es gibt einen entsprechenden Hinweis, dass der Benutzer weiß mit welchem Kommando er den Taschenrechner beenden kann
 Status:
-	• offen
+	• implementiert
+	• getestet
+	• erledigt
 
 Titel: Fortlaufende Berechnung
 User Story: Als Benutzer möchte ich eine weitere Zahl eingeben, um die vorherige Operation nochmals auszuführen mit dem vorherigen Resultat.
@@ -17,14 +19,18 @@ Akzeptanzkriterien:
 	• Die Operation aus der vorherigen Berechnung wird nochmals verwendet
 	• Das neue Resultat wird ausgegeben ohne weitere Interaktion mit dem Benutzer
 Status:
-	• offen
+	• implementiert
+	• getestet
+	• erledigt
 
 Titel: ObjektOrientierung
 User Story: Als Entwickler möchte ich die Anwendung objektorientiert entwickeln, um später einfach weitere Funktionalitäten hinzufügen zu können.
 Akzeptanzkriterien:
 	• Diese Story ist eine Erweiterung zu Story "Softwarestruktur"
 Status:
-	• offen
+	• implementiert
+	• getestet
+	• erledigt
 
 Titel: Division
 User Story: Als Benutzer möchte ich zwei Zahlen eingeben, um deren Quotient berechnen zu lassen.

@@ -1,0 +1,10 @@
+TAG: Iteration_3_Fertig
+ART: Internes Entwicklungsrelease
+STATUS: Informell getestet - kann an Tester verteilt werden
+FUNKTION:
+	- Fortlaufende Berechnung
+	- Beendung nach Eingabe eines Schlüsselwortes
+	- Addition
+	- Subtraktion
+	- Division
+	- Multiplikation
