@@ -15,13 +15,9 @@ namespace Calculator
 
         public void Execute()
         {
-            string firstNumberAsString = this._view.GetNumberFromUser();
+            double firstNumber = this._view.GetNumberFromUser();
             string operation = this._view.GetOperatorFromUser();
-            string secondNumberAsString = this._view.GetNumberFromUser();
-
-            // Wandle Text in Dezimalzahl mittels extra Parameter
-            double firstNumber = ConvertToDouble(firstNumberAsString);
-            double secondNumber = ConvertToDouble(secondNumberAsString);
+            double secondNumber = this._view.GetNumberFromUser();
 
             // Berechnung ausführen
             this._model.Calculate(operation, firstNumber, secondNumber);
@@ -30,11 +26,6 @@ namespace Calculator
             this._view.ResultOutput(operation);
 
             this._view.GetUserInput("Press enter to exit!");
-        }
-
-        static double ConvertToDouble(string no)
-        {
-            return Convert.ToDouble(no);
         }
     }
 }

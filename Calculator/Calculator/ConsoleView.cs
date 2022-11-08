@@ -11,10 +11,14 @@ namespace Calculator
             this._model = model;
         }
 
-        public string GetNumberFromUser()
+        public double GetNumberFromUser()
         {
             Console.Write("Insert a number for calculation: ");
-            return Console.ReadLine().Replace(",",".");
+            return ConvertToDouble(Console.ReadLine().Replace(",","."));
+        }
+        private static double ConvertToDouble(string no)
+        {
+            return Convert.ToDouble(no);
         }
 
         public string GetOperatorFromUser()
