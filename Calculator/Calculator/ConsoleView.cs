@@ -15,26 +15,32 @@ namespace Calculator
             UserWantToQuit = false;
         }
 
-        public void GetInputsFromUser()
+        public void GetInputsFromUserForFirstCalculation()
         {
             this._model.FirstNumber = GetNumberFromUser();
             this._model.Operation = GetOperatorFromUser();
             this._model.SecondNumber = GetNumberFromUser();
         }
-            
-        private double GetNumberFromUser()
-        {
-            string input;
-            Console.Write("Insert a number for calculation (Quit for exit): ");
-            input = Console.ReadLine().Replace(",",".");
 
-            if (input == "Quit")
+        public void GetInputFromUserForFurtherCalculations()
+        {
+            string input = this.GetOperatorFromUser();
+            if (input == "quit")
             {
                 UserWantToQuit = true;
-                input = "0.0";
             }
+            else
+            {
+                this._model.FirstNumber = this._model.Result;
+                this._model.Operation = input;
+                this._model.SecondNumber = this.GetNumberFromUser();
+            }
+        }
 
-            return ConvertToDouble(input);
+        private double GetNumberFromUser()
+        {
+            Console.Write("Insert a number for calculation: ");
+            return this.ConvertToDouble(Console.ReadLine().Replace(",", "."));
         }
         private double ConvertToDouble(string no)
         {
@@ -43,14 +49,8 @@ namespace Calculator
 
         private string GetOperatorFromUser()
         {
-            Console.Write("Insert an operator for calculation type (+, -, * or /): ");
+            Console.Write("Insert an operator for calculation type (+, -, *, / or quit for exit): ");
             return Console.ReadLine();
-        }
-
-        public void WaitForExitThroughUser()
-        {
-            Console.WriteLine("To exit the calculater please press enter!");
-            Console.ReadLine();
         }
 
         public void ResultOutput()
