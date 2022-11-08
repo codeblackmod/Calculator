@@ -14,7 +14,7 @@ namespace Calculator
         public string GetNumberFromUser()
         {
             Console.Write("Insert a number for calculation: ");
-            return Console.ReadLine();
+            return Console.ReadLine().Replace(",",".");
         }
 
         public string GetOperatorFromUser()
