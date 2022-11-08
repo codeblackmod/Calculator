@@ -3,13 +3,17 @@
     class RechnerModel
     {
         public double Result { get; private set; }
+        public string Operation { get; private set; }
 
         public RechnerModel()
         {
             Result = 0;
+            Operation = "unknown";
         }
         public void Calculate(string operation, double firstNumber, double secondNumber)
         {
+            this.Operation = operation;
+
             switch (operation)
             {
                 case "+":

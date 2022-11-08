@@ -23,9 +23,9 @@ namespace Calculator
             this._model.Calculate(operation, firstNumber, secondNumber);
 
             // Berechnung ausgeben
-            this._view.ResultOutput(operation);
+            this._view.ResultOutput();
 
-            this._view.GetUserInput("Press enter to exit!");
+            this._view.WaitForExitThroughUser();
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Calculator
 {
@@ -33,16 +34,11 @@ namespace Calculator
             Console.ReadLine();
         }
 
-        public string GetUserInput(string outputText)
+        public void ResultOutput()
         {
-            Console.Write(outputText);
-            string addend = Console.ReadLine().Replace(",", ".");
-            return addend;
-        }
+            List<string> supportedOperations = new List<string> { "+", "-", "*", "/" };
 
-        public void ResultOutput(string operation)
-        {
-            if (operation == "+" || operation == "-" || operation == "*" || operation == "/")
+            if (supportedOperations.Contains(this._model.Operation))
             {
                 Console.WriteLine("The result is: " + _model.Result);
             }
