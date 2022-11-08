@@ -15,14 +15,10 @@ namespace Calculator
 
         public void Execute()
         {
-            double firstNumber = this._view.GetNumberFromUser();
-            string operation = this._view.GetOperatorFromUser();
-            double secondNumber = this._view.GetNumberFromUser();
+            this._view.GetInputsFromUser();
 
-            // Berechnung ausführen
-            this._model.Calculate(operation, firstNumber, secondNumber);
+            this._model.Calculate();
 
-            // Berechnung ausgeben
             this._view.ResultOutput();
 
             this._view.WaitForExitThroughUser();

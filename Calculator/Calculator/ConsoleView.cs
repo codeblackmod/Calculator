@@ -12,7 +12,14 @@ namespace Calculator
             this._model = model;
         }
 
-        public double GetNumberFromUser()
+        public void GetInputsFromUser()
+        {
+            this._model.FirstNumber = GetNumberFromUser();
+            this._model.Operation = GetOperatorFromUser();
+            this._model.SecondNumber = GetNumberFromUser();
+        }
+            
+        private static double GetNumberFromUser()
         {
             Console.Write("Insert a number for calculation: ");
             return ConvertToDouble(Console.ReadLine().Replace(",","."));
@@ -22,7 +29,7 @@ namespace Calculator
             return Convert.ToDouble(no);
         }
 
-        public string GetOperatorFromUser()
+        private static string GetOperatorFromUser()
         {
             Console.Write("Insert an operator for calculation type (+, -, * or /): ");
             return Console.ReadLine();

@@ -3,33 +3,34 @@
     class RechnerModel
     {
         public double Result { get; private set; }
-        public string Operation { get; private set; }
+        public string Operation { get; set; }
+        public double FirstNumber { get; set; }
+        public double SecondNumber { get; set; }
+
 
         public RechnerModel()
         {
             Result = 0;
             Operation = "unknown";
         }
-        public void Calculate(string operation, double firstNumber, double secondNumber)
+        public void Calculate()
         {
-            this.Operation = operation;
-
-            switch (operation)
+            switch (Operation)
             {
                 case "+":
-                    Result = this.Add(firstNumber, secondNumber);
+                    Result = this.Add(FirstNumber, SecondNumber);
                     break;
 
                 case "-":
-                    Result = this.Substract(firstNumber, secondNumber);
+                    Result = this.Substract(FirstNumber, SecondNumber);
                     break;
 
                 case "*":
-                    Result = this.Multiplicate(firstNumber, secondNumber);
+                    Result = this.Multiplicate(FirstNumber, SecondNumber);
                     break;
 
                 case "/":
-                    Result = this.Divide(firstNumber, secondNumber);
+                    Result = this.Divide(FirstNumber, SecondNumber);
                     break;
             }
         }
